@@ -78,7 +78,7 @@ exports.updateStatus = async(req, res) => {
 
     if(status == "completed"){
         return res.status(200).json({
-            message : "This taks is now completed",
+            message : "This task is now completed",
             data: updatedToDo
         })
     }

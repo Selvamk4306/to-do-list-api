@@ -80,7 +80,7 @@ router.put("/", updateTodo)
 // });
 
 // PUT - Update status of To-Do (MongoDB)
-router.put("/:title", updateStatus)
+router.patch("/:title", updateStatus)
 
 // Deleting a To-Do item using DELETE
 router.delete("/:title", deleteTodo)
