@@ -56,7 +56,7 @@ router.post("/", addTodo)
 // });
 
 // Updating a To-Do item using PUT
-router.put("/", updateTodo)
+router.put("/:title", updateTodo)
 
 // router.put('/', async (req, res) => {
 //     const { title, data } = req.body;
@@ -79,7 +79,7 @@ router.put("/", updateTodo)
 //     });
 // });
 
-// PUT - Update status of To-Do (MongoDB)
+// PATCH - Update single status of To-Do (MongoDB)
 router.patch("/:title", updateStatus)
 
 // Deleting a To-Do item using DELETE

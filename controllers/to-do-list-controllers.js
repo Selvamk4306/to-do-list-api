@@ -44,8 +44,9 @@ exports.addTodo = async(req, res) =>{
 }
 
 exports.updateTodo = async(req, res) => {
-    const { id, data } = req.body;
-    const updatedToDo = await ToDoModel.findByIdAndUpdate(id, data, { new: true });
+    const { title } = req.params;
+    const { data } = req.body;
+    const updatedToDo = await ToDoModel.findByIdAndUpdate(title, data, { new: true });
 
     if (!updatedToDo) {
         return res.status(404).json({
